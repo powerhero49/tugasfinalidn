@@ -14,3 +14,4 @@ sed -i 's/#ServerName www.example.com/ServerName 'peserta$i'.lnxpeserta.33.id/g'
 sed -i 's\DocumentRoot /var/www/html\DocumentRoot /home/'peserta$i'\g' /etc/apache2/sites-available/peserta$i.conf
 a2ensite peserta$i.conf
 done
+systemctl restart apache2
