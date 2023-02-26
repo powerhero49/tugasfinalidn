@@ -14,3 +14,7 @@ Buat VirtualHost dengan DocumentRoot mengarah ke userdir peserta1-50
 Hasil Akhir, Lakukan akses ke subdomain peserta1-50, misalkan peserta1
 
 berarti ketika mengakses domain peserta1.lnxpeserta-noabsen.id akan menampilkan “Selamat datang di website peserta1”
+
+
+
+sed -i 's/\r//' nama_skrip.sh
