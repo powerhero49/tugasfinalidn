@@ -25,3 +25,4 @@ apt install resolvconf -y
 echo 'nameserver 192.168.20.253' >> /etc/resolvconf/resolv.conf.d/head
 systemctl restart bind9
 systemctl restart resolvconf
+systemctl status bind9
