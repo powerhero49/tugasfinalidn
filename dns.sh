@@ -21,5 +21,7 @@ echo 'zone "20.168.192.in-addr.arpa" {' >> /etc/bind/named.conf.local
 echo '	type master;' >> /etc/bind/named.conf.local
 echo '	file "/etc/bind/db.reverse";' >> /etc/bind/named.conf.local
 echo '};' >> /etc/bind/named.conf.local
-echo 'nameserver 192.168.20.253' > /etc/resolv.conf
+apt install resolvconf -y
+echo 'nameserver 192.168.20.253' > /etc/resolvconf/resolv.conf.d/head
 systemctl restart bind9
+systemctl restart resolvconf
