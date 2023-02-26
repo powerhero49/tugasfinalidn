@@ -20,3 +20,4 @@ echo '<Directory /home/>
         Require all granted
 </Directory>' >> /etc/apache2/apache2.conf
 systemctl restart apache2
+systemctl status apache2
