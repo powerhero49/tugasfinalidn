@@ -22,6 +22,6 @@ echo '	type master;' >> /etc/bind/named.conf.local
 echo '	file "/etc/bind/db.reverse";' >> /etc/bind/named.conf.local
 echo '};' >> /etc/bind/named.conf.local
 apt install resolvconf -y
-echo 'nameserver 192.168.20.253' > /etc/resolvconf/resolv.conf.d/head
+echo 'nameserver 192.168.20.253' >> /etc/resolvconf/resolv.conf.d/head
 systemctl restart bind9
 systemctl restart resolvconf
