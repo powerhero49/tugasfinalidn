@@ -14,12 +14,12 @@ echo '253	IN	PTR	peserta'$i'.lnxpeserta-33.id.' >> /etc/bind/db.reverse
 done
 echo 'zone "lnxpeserta-33.id" {' >> /etc/bind/named.conf.local
 echo '	type master;' >> /etc/bind/named.conf.local
-echo '	file "/etc/bind/db.forward"' >> /etc/bind/named.conf.local
+echo '	file "/etc/bind/db.forward";' >> /etc/bind/named.conf.local
 echo '};' >> /etc/bind/named.conf.local
 echo -e '\n' >> /etc/bind/named.conf.local
 echo 'zone "20.168.192.in-addr.arpa" {' >> /etc/bind/named.conf.local
 echo '	type master;' >> /etc/bind/named.conf.local
-echo '	file "/etc/bind/db.reverse"' >> /etc/bind/named.conf.local
+echo '	file "/etc/bind/db.reverse";' >> /etc/bind/named.conf.local
 echo '};' >> /etc/bind/named.conf.local
 echo 'nameserver 192.168.20.253' > /etc/resolv.conf
 systemctl restart bind9
